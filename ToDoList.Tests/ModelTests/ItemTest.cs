@@ -38,10 +38,10 @@ namespace ToDoList.Tests
 
       //Act
       List<Item> result = Item.GetAll();
-      foreach (Item thisItem in result)
-      {
-        Console.WriteLine("Output: " + thisItem.GetDescription());
-      }
+      // foreach (Item thisItem in result)
+      // {
+      //   Console.WriteLine("Output: " + thisItem.GetDescription());
+      // }
 
       //Assert
       CollectionAssert.AreEqual(newList, result);
