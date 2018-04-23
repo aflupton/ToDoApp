@@ -1,15 +1,27 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
+using System;
 using ToDoList.Controllers;
 using ToDoList.Models;
 
-namespace ToDoList.TestClass
+namespace ToDoList.Tests
 {
   [TestClass]
   public class HomeControllerTest
   {
-    //code goes here
+    [TestMethod]
+    public void Index_ReturnsCorrectView_True()
+    {
+      //Arrange
+      HomeController controller = new HomeController();
+
+
+      //Act
+      ActionResult indexView = controller.Index();
+
+      //Assert
+      Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+    }
   }
 }
